@@ -1,7 +1,7 @@
 <?php
 
 //Clase para conectarse ala base de datos y ejecutar consultas
-//PDO
+//PDO crear una conexion tipo mySQL// buscar patron factory multiples origenes  de datos
 class Base{
     private $host =DB_HOST;
     private $usuario =DB_USUARIO;
@@ -79,7 +79,7 @@ class Base{
         $this->execute();
         return $this->stmt->rowCount();
     }
-
+    
 
 }
 
