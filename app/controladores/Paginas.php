@@ -6,9 +6,10 @@ class Paginas extends Controlador{
     public function index(){
         
         $datos=[
-            'titulo'=>'Bienvenidos a WebAppMVC'
+            'titulo'=>'Bienvenidos a WebAppMVC con Crud'
                ];
 
-      $this->vista('paginas/inicio',$datos);
+     $this->vista('paginas/inicio',$datos);
+     
     }
  }
