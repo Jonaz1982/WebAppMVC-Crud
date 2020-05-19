@@ -5,7 +5,7 @@
             //Cargar modelo
             public function modelo($modelo){
                 //carga modelo
-                require_once '../app/modelos/' .$modelo .'php';
+                require_once '../app/modelos/Usuario.php';
                 //Instanciar el modelo
                 return new $modelo();
             }
