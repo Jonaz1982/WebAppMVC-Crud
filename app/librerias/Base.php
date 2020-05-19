@@ -15,7 +15,7 @@ class Base{
     public function __construct()
     {
         // configuro mi conexion ala BD
-        $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this-> nombre_base;
+        $dsn = 'mysql:host='.$this->host.';user='.$this->usuario.';password='.$this->password.';dbname=' . $this->nombre;
         $opciones = array(
             PDO::ATTR_PERSISTENT =>true,
             PDO::ATTR_ERRMODE => PDO:: ERRMODE_EXCEPTION
