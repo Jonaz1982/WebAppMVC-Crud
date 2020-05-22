@@ -8,7 +8,7 @@ define('DB_NOMBRE','crud_mvc');
 
 //Ruta de la aplicacion
 define('RUTA_APP', dirname(__FILE__));
-//Rutade la url : http://localhost:82/WebAppMVC/
-define('RUTA_URL', 'http://localhost:82/WebAppMVC-Crud');
+//Rutade la url : http://localhost/WebAppMVC/
+define('RUTA_URL', 'http://localhost/WebAppMVC-Crud');
 
 define('NOMBRESITIO', 'CRUD MVC CON PHP');

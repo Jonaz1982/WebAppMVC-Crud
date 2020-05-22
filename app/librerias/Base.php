@@ -10,7 +10,7 @@ class Base{
 
     private $dbh;
     private $stmt;
-    private $error;
+    private $error;       
 
     public function __construct()
     {
@@ -25,12 +25,15 @@ class Base{
         try{
             $this->dbh =new PDO($dsn, $this->usuario, $this->
             password, $opciones);
-            $this->dbh->exec('set names utf');         
+            //Verificacion de cotejamiento
+         // $this->dbh->exec('utf-8');
         }catch(PDOException $e){
             $this->error = $e->getMessage();
             echo $this->error;
         }
     } 
+
+   
     //PREPARAMOS LA CONSULTA
     public function query($sql){
        $this->stmt = $this->dbh->prepare($sql);

@@ -16,8 +16,9 @@
             <td><?php echo $usuario->nombre; ?></td>
             <td><?php echo $usuario->email; ?></td>
             <td><?php echo $usuario->telefono; ?></td>
-            <td><a href="<?php echo RUTA_URL; ?>paginas/editar/<?php echo $usuario->id_usuario;?>"> Editar</a></td>
-            <td><a href="<?php echo RUTA_URL; ?>paginas/borrar/<?php echo $usuario->id_usuario;?>"> Borrar</a></td>
+            
+            <td><a href="<?php echo RUTA_URL; ?>/paginas/editar/<?php echo $usuario->id_usuario;?>"> Editar</a></td>
+            <td><a href="<?php echo RUTA_URL; ?>/paginas/borrar/<?php echo $usuario->id_usuario;?>"> Borrar</a></td>
         </tr>
     <?php endforeach; ?>
     </tbody>

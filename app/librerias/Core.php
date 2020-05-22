@@ -18,7 +18,6 @@ class Core{
         //print_r($this->getUrl());
         $url = $this->getUrl();
         
-
         //Buscar en controladores  si el controlador existe!!
         if (file_exists('../app/controladores/'. ucwords($url[0]).'.php')) {
             //si existe se setea como controlador por defecto
@@ -30,7 +29,7 @@ class Core{
         //requerir el controlador 
         require_once '../app/controladores/'.$this->controladorActual.'.php';
         $this->controladorActual = new $this->controladorActual;
-
+        
         //Verificar la segunda parte de la url que es metodo!!
         if (isset($url[1])) {
             if (method_exists($this->controladorActual, $url[1])){
@@ -45,7 +44,7 @@ class Core{
 
        //obterner los posibles parametros
        $this->parametros = $url ? array_values($url):[0];
-           
+                  
        //Llamar callback con parametros array
        call_user_func_array([$this->controladorActual, $this->metodoActual],$this->parametros);
     }
