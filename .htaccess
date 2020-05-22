@@ -1,11 +1,6 @@
-    # BEGIN htaccess en el principal
-    <ifModule mod_rewrite.c>
-    Options -Multiviews
-    RewriteEngine On
-    RewriteBase /WebAppMVC-Crud/public
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^(.+)$ index.php?url-$1 [QSA,L]
-    </ifModule>
-    # END htaccess
+    <IfModule mod_rewrite.c>
+        RewriteEngine On
+        RewriteRule ^$ public/ [L]
+        RewriteRule (.*) public/$1 [L]
+    </IfModule>
 
